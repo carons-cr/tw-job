@@ -1,0 +1,18 @@
+default: &default
+  adapter: mysql2
+  pool: 5
+  timeout: 5000
+  encoding: utf8
+  username: root
+
+development:
+  <<: *default
+  database: cgc_development
+
+test:
+  <<: *default
+  database: cgc_test
+
+production:
+  <<: *default
+  database: cgc_prod
